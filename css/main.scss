@@ -1,0 +1,51 @@
+---
+---
+
+// start content
+@import url(https://fonts.googleapis.com/css?family=Quattrocento|Quattrocento+Sans:400,400italic,700|Yellowtail);
+@import "../_sass/bourbon/bourbon";
+@import "../_sass/grid-settings";
+@import "../_sass/neat/neat";
+@import "../_sass/base/base";
+
+
+body {
+  background-color: white;
+  margin: 0;
+}
+
+header {
+  box-shadow:  0 0px 5px #888888;
+
+  > div {
+    background: repeat url("/img/header-background.png");
+    padding-top: 65px;
+  }
+
+  nav {
+    @include outer-container();
+    background-color: white;
+    position: relative;
+    height: 100px;
+    line-height: 100px;
+    padding-left: 170px;
+
+    .logo {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 120px;
+    }
+
+    a.item {
+      color: $brand-primary;
+      font-size: 1.25em;
+      text-transform: uppercase;
+      margin-right: $gutter * 2;
+
+      &:hover {
+        color: $brand-secondary
+      }
+    }
+  }
+}
